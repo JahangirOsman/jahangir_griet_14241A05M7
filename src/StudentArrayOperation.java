@@ -33,7 +33,6 @@ public interface StudentArrayOperation {
 	 * @param index
 	 */
 	Student getStudent(int index);
-
 	
 	/**
 	 * Replaces the element at the specified position in this array with the

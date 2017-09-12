@@ -15,7 +15,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	private Student[] students;
 	public int len;
-	/**
+public int c=0;	/**
 	 * DO NOT remove or change this constructor, it will be used during task check
 	 * @param length
 	 */
@@ -48,48 +48,54 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student getStudent(int index) {
-		// Add your implementation here
+		getStudent(index);// Add your implementation here
 		return null;
 	}
 
 	@Override
 	public void setStudent(Student student, int index) {
-		// Add your implementation here
+		add(student,index);
+// Add your implementation here
 	}
 
 	@Override
 	public void addFirst(Student student) {
+students[0]=student;		// Add your implementation here
 		// Add your implementation here
 	}
 
 	@Override
 	public void addLast(Student student) {
-		// Add your implementation here
+students[c++]=student;		// Add your implementation here
 	}
 
 	@Override
 	public void add(Student student, int index) {
-		// Add your implementation here
+		add(student,index);		// Add your implementation here
 	}
 
 	@Override
 	public void remove(int index) {
+			removeFromIndex(index);
 		// Add your implementation here
 	}
 
 	@Override
 	public void remove(Student student) {
-		// Add your implementation here
+		removeFromElement(student);
+// Add your implementation here
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
+	removeFromIndex(index);
 		// Add your implementation here
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
-		// Add your implementation here
+		removeFromElement(student);
+// Add your implementation here
 	}
 
 	@Override
@@ -104,7 +110,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void bubbleSort() {
-		// Add your implementation here
+	// Add your implementation here
 	}
 
 	@Override
