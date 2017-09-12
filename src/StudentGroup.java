@@ -44,15 +44,6 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void setStudents(Student[] students) {
 
-	for(int i=0;i<len;i++)
-		{
-
-			Student(i);
-		
-
-
-		}
-		// Add your implementation here
 	}
 
 	@Override
