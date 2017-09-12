@@ -48,8 +48,11 @@ public int c=0;	/**
 
 	@Override
 	public Student getStudent(int index) {
-		getStudent(index);// Add your implementation here
-		return null;
+		System.out.println(students[index].getId());
+		System.out.println(students[index].getFullName());
+System.out.println(students[index].getBirthDate());
+System.out.println(students[index].getAvgMark());
+return null;
 	}
 
 	@Override
@@ -60,24 +63,43 @@ public int c=0;	/**
 
 	@Override
 	public void addFirst(Student student) {
+for(int i=0;i<c;i++)
+{
+students[i+1]=students[i];
+}
 students[0]=student;		// Add your implementation here
-		// Add your implementation here
+c++;		// Add your implementation here
 	}
 
 	@Override
 	public void addLast(Student student) {
-students[c++]=student;		// Add your implementation here
+students[c++]=student;	
+	// Add your implementation here
 	}
 
 	@Override
 	public void add(Student student, int index) {
-		add(student,index);		// Add your implementation here
-	}
+		//add(student,index);	
+for(int i=index;i<c;i++)
+{
+students[i+1]=students[i];
+
+
+}
+students[index]=student;	// Add your implementation here
+c++;	}
 
 	@Override
 	public void remove(int index) {
-			removeFromIndex(index);
-		// Add your implementation here
+/*			for(int i=index;i<c;i++)
+{
+students[i]=students[i-1];
+
+
+}
+students[index]=student;	// Add your implementation here
+c++;
+*/		// Add your implementation here
 	}
 
 	@Override
