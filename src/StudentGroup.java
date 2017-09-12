@@ -26,7 +26,7 @@ public int c=0;	/**
 	}
 
 	@Override
-	public Student[] getStudents() {
+	public Student[] getStudents() throws IllegalArgumentException{
 		//StudentArrayOperation s=new StudentArrayOperation();
 		for(int i=0;i<len;i++)
 		{
@@ -42,7 +42,7 @@ public int c=0;	/**
 	}
 
 	@Override
-	public void setStudents(Student[] students) {
+	public void setStudents(Student[] students) throws IllegalArgumentException{
 
 	}
 
@@ -57,12 +57,12 @@ return null;
 
 	@Override
 	public void setStudent(Student student, int index) {
-		add(student,index);
+		//add(student,index)
 // Add your implementation here
 	}
 
 	@Override
-	public void addFirst(Student student) {
+	public void addFirst(Student student) throws IllegalArgumentException{
 for(int i=0;i<c;i++)
 {
 students[i+1]=students[i];
@@ -72,13 +72,13 @@ c++;		// Add your implementation here
 	}
 
 	@Override
-	public void addLast(Student student) {
+	public void addLast(Student student) throws IllegalArgumentException{
 students[c++]=student;	
 	// Add your implementation here
 	}
 
 	@Override
-	public void add(Student student, int index) {
+	public void add(Student student, int index) throws IllegalArgumentException {
 		//add(student,index);	
 for(int i=index;i<c;i++)
 {
@@ -90,33 +90,39 @@ students[index]=student;	// Add your implementation here
 c++;	}
 
 	@Override
-	public void remove(int index) {
-/*			for(int i=index;i<c;i++)
+	public void remove(int index) throws IllegalArgumentException{
+c--;
+			for(int i=index;i<c;i++)
 {
-students[i]=students[i-1];
+students[i]=students[i+1];
 
 
-}
-students[index]=student;	// Add your implementation here
-c++;
-*/		// Add your implementation here
+}	// Add your implementation here
+		// Add your implementation here
 	}
 
 	@Override
-	public void remove(Student student) {
-		removeFromElement(student);
+	public void remove(Student student) throws IllegalArgumentException{
+	//	removeFromElement(student);
+for(int i=0;i<c;i++)
+{
+if(students[i].getId()==student.getId())
+{
+remove(i);
+
+}
+}
 // Add your implementation here
 	}
 
 	@Override
 	public void removeFromIndex(int index) {
-	removeFromIndex(index);
-		// Add your implementation here
+	// Add your implementation here
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
-		removeFromElement(student);
+//removeFromElement(student);
 // Add your implementation here
 	}
 
